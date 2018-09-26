@@ -1,3 +1,3 @@
-This is frontend
+<?php
 
-
+require_once dirname(__DIR__) . '/config/init.php';
