@@ -44,3 +44,21 @@
 --------------------
 [2018-09-28 22:23:30] Текст ошибки: Страница не найдена | Файл: /var/www/eshop-php-project/public/index.php | Строка: 8 | Код: 404
 --------------------
+[2018-09-30 17:57:07] Текст ошибки: Страница не найдена | Файл: /var/www/eshop-php-project/public/index.php | Строка: 8 | Код: 404
+--------------------
+[2018-09-30 17:57:07] Текст ошибки: Страница не найдена | Файл: /var/www/eshop-php-project/public/index.php | Строка: 8 | Код: 404
+--------------------
+[2018-09-30 17:57:16] Текст ошибки: Страница не найдена | Файл: /var/www/eshop-php-project/public/index.php | Строка: 8 | Код: 404
+--------------------
+[2018-09-30 19:53:04] Текст ошибки: Call to undefined method ishop\Router::getProperties() | Файл: /var/www/eshop-php-project/public/index.php | Строка: 10 | Код: 0
+--------------------
+[2018-09-30 19:53:05] Текст ошибки: Call to undefined method ishop\Router::getProperties() | Файл: /var/www/eshop-php-project/public/index.php | Строка: 10 | Код: 0
+--------------------
+[2018-09-30 19:54:12] Текст ошибки: Call to undefined method ishop\Router::getProperties() | Файл: /var/www/eshop-php-project/public/index.php | Строка: 10 | Код: 0
+--------------------
+[2018-09-30 19:55:15] Текст ошибки: Undefined class constant 'routes' | Файл: /var/www/eshop-php-project/vendor/ishop/core/Router.php | Строка: 14 | Код: 0
+--------------------
+[2018-09-30 20:38:26] Текст ошибки: Call to undefined method ishop\Router::maatchRoute() | Файл: /var/www/eshop-php-project/vendor/ishop/core/Router.php | Строка: 22 | Код: 0
+--------------------
+[2018-09-30 20:38:28] Текст ошибки: Call to undefined method ishop\Router::maatchRoute() | Файл: /var/www/eshop-php-project/vendor/ishop/core/Router.php | Строка: 22 | Код: 0
+--------------------
