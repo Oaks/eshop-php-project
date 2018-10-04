@@ -62,3 +62,45 @@
 --------------------
 [2018-09-30 20:38:28] Текст ошибки: Call to undefined method ishop\Router::maatchRoute() | Файл: /var/www/eshop-php-project/vendor/ishop/core/Router.php | Строка: 22 | Код: 0
 --------------------
+[2018-09-30 21:31:56] Текст ошибки: Undefined class constant 'routes' | Файл: /var/www/eshop-php-project/vendor/ishop/core/Router.php | Строка: 30 | Код: 0
+--------------------
+[2018-09-30 21:31:59] Текст ошибки: Undefined class constant 'routes' | Файл: /var/www/eshop-php-project/vendor/ishop/core/Router.php | Строка: 30 | Код: 0
+--------------------
+[2018-09-30 21:39:32] Текст ошибки: Call to undefined function ishop\dump() | Файл: /var/www/eshop-php-project/vendor/ishop/core/Router.php | Строка: 32 | Код: 0
+--------------------
+[2018-09-30 21:40:23] Текст ошибки: Call to undefined function dump() | Файл: /var/www/eshop-php-project/vendor/ishop/core/Router.php | Строка: 32 | Код: 0
+--------------------
+[2018-09-30 22:24:30] Текст ошибки: Страница не найдена | Файл: /var/www/eshop-php-project/vendor/ishop/core/Router.php | Строка: 25 | Код: 404
+--------------------
+[2018-09-30 22:26:23] Текст ошибки: Страница не найдена | Файл: /var/www/eshop-php-project/vendor/ishop/core/Router.php | Строка: 25 | Код: 404
+--------------------
+[2018-09-30 22:27:15] Текст ошибки: Страница не найдена | Файл: /var/www/eshop-php-project/vendor/ishop/core/Router.php | Строка: 25 | Код: 404
+--------------------
+[2018-10-04 18:49:05] Текст ошибки: Страница не найдена | Файл: /var/www/eshop-php-project/vendor/ishop/core/Router.php | Строка: 25 | Код: 404
+--------------------
+[2018-10-04 19:44:11] Текст ошибки: Страница не найдена | Файл: /var/www/eshop-php-project/vendor/ishop/core/Router.php | Строка: 25 | Код: 404
+--------------------
+[2018-10-04 19:48:05] Текст ошибки: Undefined class constant 'route' | Файл: /var/www/eshop-php-project/vendor/ishop/core/Router.php | Строка: 23 | Код: 0
+--------------------
+[2018-10-04 20:03:48] Текст ошибки: Call to undefined function ishop\ucword() | Файл: /var/www/eshop-php-project/vendor/ishop/core/Router.php | Строка: 56 | Код: 0
+--------------------
+[2018-10-04 20:05:51] Текст ошибки: Call to undefined function ishop\ucword() | Файл: /var/www/eshop-php-project/vendor/ishop/core/Router.php | Строка: 56 | Код: 0
+--------------------
+[2018-10-04 20:06:42] Текст ошибки: Call to undefined function ishop\sstr_replace() | Файл: /var/www/eshop-php-project/vendor/ishop/core/Router.php | Строка: 56 | Код: 0
+--------------------
+[2018-10-04 20:24:12] Текст ошибки: Call to undefined function ishop\class_exissts() | Файл: /var/www/eshop-php-project/vendor/ishop/core/Router.php | Строка: 24 | Код: 0
+--------------------
+[2018-10-04 20:24:36] Текст ошибки: Контроллер app\controllers\PageNewController не найден | Файл: /var/www/eshop-php-project/vendor/ishop/core/Router.php | Строка: 29 | Код: 404
+--------------------
+[2018-10-04 20:37:53] Текст ошибки: Контроллер app\controllers\PageNewController не найден | Файл: /var/www/eshop-php-project/vendor/ishop/core/Router.php | Строка: 33 | Код: 404
+--------------------
+[2018-10-04 20:38:07] Текст ошибки: Контроллер app\controllers\MainController не найден | Файл: /var/www/eshop-php-project/vendor/ishop/core/Router.php | Строка: 33 | Код: 404
+--------------------
+[2018-10-04 20:38:09] Текст ошибки: Контроллер app\controllers\MainController не найден | Файл: /var/www/eshop-php-project/vendor/ishop/core/Router.php | Строка: 33 | Код: 404
+--------------------
+[2018-10-04 20:39:30] Текст ошибки: Контроллер app\controllers\MainController не найден | Файл: /var/www/eshop-php-project/vendor/ishop/core/Router.php | Строка: 33 | Код: 404
+--------------------
+[2018-10-04 20:40:45] Текст ошибки: Контроллер app\controllers\MainController не найден | Файл: /var/www/eshop-php-project/vendor/ishop/core/Router.php | Строка: 33 | Код: 404
+--------------------
+[2018-10-04 20:49:39] Текст ошибки: Метод app\controllers\MainController::indexAction не найден | Файл: /var/www/eshop-php-project/vendor/ishop/core/Router.php | Строка: 30 | Код: 404
+--------------------

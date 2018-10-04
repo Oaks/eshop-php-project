@@ -7,5 +7,3 @@ require_once CONF . '/routes.php';
 new \ishop\App();
 
 
-debug(\ishop\Router::getRoutes());
-
