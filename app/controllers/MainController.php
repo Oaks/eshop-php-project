@@ -2,8 +2,11 @@
 
 namespace app\controllers;
 
-class MainController {
+class MainController extends AppController {
   public function indexAction() {
-    echo __METHOD__;
+    echo 'Main controller';
+    debug($this->route);
+    debug($this->route['controller']);
+    die;
   }
 }
