@@ -106,3 +106,9 @@
 --------------------
 [2018-10-07 16:58:16] Текст ошибки: Страница не найдена | Файл: /var/www/eshop-php-project/vendor/ishop/core/Router.php | Строка: 36 | Код: 404
 --------------------
+[2018-10-07 22:57:20] Текст ошибки: Cannot instantiate abstract class ishop\base\View | Файл: /var/www/eshop-php-project/vendor/ishop/core/base/Controller.php | Строка: 33 | Код: 0
+--------------------
+[2018-10-07 23:06:19] Текст ошибки: Class 'ishop\base\Exception' not found | Файл: /var/www/eshop-php-project/vendor/ishop/core/base/View.php | Строка: 33 | Код: 0
+--------------------
+[2018-10-07 23:06:46] Текст ошибки: Не найден вид /var/www/eshop-php-project/app/views/Main/index.php | Файл: /var/www/eshop-php-project/vendor/ishop/core/base/View.php | Строка: 33 | Код: 500
+--------------------
