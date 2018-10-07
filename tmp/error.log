@@ -104,3 +104,5 @@
 --------------------
 [2018-10-04 20:49:39] Текст ошибки: Метод app\controllers\MainController::indexAction не найден | Файл: /var/www/eshop-php-project/vendor/ishop/core/Router.php | Строка: 30 | Код: 404
 --------------------
+[2018-10-07 16:58:16] Текст ошибки: Страница не найдена | Файл: /var/www/eshop-php-project/vendor/ishop/core/Router.php | Строка: 36 | Код: 404
+--------------------
