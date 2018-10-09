@@ -1,6 +1,6 @@
 <head>
   <meta charset="UTF-8">
-  <title></title>
+  <?=$this->getMeta();?>
 </head>
 <body>
   Это шаблон

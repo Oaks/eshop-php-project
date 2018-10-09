@@ -1,6 +1,7 @@
 *.swp
 vendor/
 !vendor/ishop/
+tmp/
 
 
 
