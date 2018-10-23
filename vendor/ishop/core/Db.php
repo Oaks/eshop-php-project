@@ -12,7 +12,6 @@ class Db {
     if (!\R::testConnection()) {
       throw new \Exception('Нет соединения с БД');
     } else {
-      echo 'Соединение установлено';
       \R::freeze(true);
       \R::debug(true, 1);
     }
