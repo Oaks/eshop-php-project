@@ -25,10 +25,8 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 				<div class="col-md-6 top-header-left">
 					<div class="drop">
 						<div class="box">
-							<select tabindex="4" class="dropdown drop">
-								<option value="" class="label">Dollar :</option>
-								<option value="1">Dollar</option>
-								<option value="2">Euro</option>
+							<select id="currency" tabindex="4" class="dropdown drop">
+                <?php new \app\widgets\currency\Currency();?>
 							</select>
 						</div>
 						<div class="box1">
@@ -286,6 +284,7 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 	<!--footer-end-->	
   <script src="js/jquery-1.11.0.min.js"></script>
   <script src="js/simpleCart.min.js"> </script>
+  <script src="js/main.js"> </script>
   <script type="text/javascript" src="js/memenu.js"></script>
   <script>$(document).ready(function(){$(".memenu").memenu();});</script>	
   <!--dropdown-->
