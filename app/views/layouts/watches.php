@@ -8,9 +8,11 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 <html>
 <head>
 <?=$this->getMeta();?>
+<base href="/">
 <link href="css/bootstrap.css" rel="stylesheet" type="text/css" media="all" />
 <link href="megamenu/css/ionicons.min.css" rel="stylesheet" type="text/css" media="all" />
 <link href="megamenu/css/style.css" rel="stylesheet" type="text/css" media="all" />
+<link rel="stylesheet" href="css/flexslider.css" type="text/css" media="screen" />
 <!--theme-style-->
 <link href="css/style.css" rel="stylesheet" type="text/css" media="all" />	
 <!--//theme-style-->
@@ -58,7 +60,7 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 	<!--top-header-->
 	<!--start-logo-->
 	<div class="logo">
-		<a href="index.html"><h1>Luxury Watches</h1></a>
+    <a href="<?=PATH;?>"><h1>Luxury Watches</h1></a>
 	</div>
 	<!--start-logo-->
 	<!--bottom-header-->
@@ -294,6 +296,17 @@ License URL: http://creativecommons.org/licenses/by/3.0/
   <script src="js/jquery-1.11.0.min.js"></script>
   <script src="js/simpleCart.min.js"> </script>
   <script src="megamenu/js/megamenu.js"> </script>
+  <script src="js/imagezoom.js"></script>
+  <script defer src="js/jquery.flexslider.js"></script>
+  <script>
+  // Can also be used with $(document).ready()
+  $(window).load(function() {
+    $('.flexslider').flexslider({
+    animation: "slide",
+    controlNav: "thumbnails"
+    });
+  });
+  </script>
   <script src="js/main.js"> </script>
   <script type="text/javascript" src="js/memenu.js"></script>
   <script>$(document).ready(function(){$(".memenu").memenu();});</script>	
@@ -324,3 +337,7 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 			<!--End-slider-script-->
 </body>
 </html>
+
+
+
+
