@@ -14,7 +14,6 @@
 	<div class="single contact">
 		<div class="container">
 			<div class="single-main">
-      <?=debug($product);?>
 				<div class="col-md-9 single-main-left">
 				<div class="sngl-top">
 					<div class="col-md-5 single-top-left">	
@@ -33,8 +32,10 @@
 						</div>
 					</div>	
 					<div class="col-md-7 single-top-right">
+            <?php $curr = \ishop\App::$app->getProperty('currency');?>
+            <?php $cats = \ishop\App::$app->getProperty('cats');?>
 						<div class="single-para simpleCart_shelfItem">
-						<h2>Lorem Ipsum</h2>
+            <h2><?=$product->title?></h2>
 							<div class="star-on">
 								<ul class="star-footer">
 										<li><a href="#"><i> </i></a></li>
@@ -50,8 +51,11 @@
 							<div class="clearfix"> </div>
 							</div>
 							
-							<h5 class="item_price">$ 95.00</h5>
-							<p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat.</p>
+							<h5 class="item_price"><?=$curr['symbol_left']?><?=$product->price*$curr['value']?><?=$curr['symbol_right']?></h5>
+                  <?php if ($product->old_price): ?>
+                    <del><?=$curr['symbol_left']?><?=$product->old_price*$curr['value']?><?=$curr['symbol_right']?></del>
+                  <?php endif; ?>
+  <p><?=$product->content?></p>
 							<div class="available">
 								<ul>
 									<li>Color
@@ -72,12 +76,13 @@
 							</ul>
 						</div>
 							<ul class="tag-men">
-								<li><span>TAG</span>
-								<span class="women1">: Women,</span></li>
-								<li><span>SKU</span>
-								<span class="women1">: CK09</span></li>
+								<li><span>Category</span>
+                <span >: <a href="category/<?=$cats[$product->category_id]['alias']?>"><?=$cats[$product->category_id]['title']?></a></span></li>
 							</ul>
-								<a href="#" class="add-cart item_add">ADD TO CART</a>
+                <div class="quantity">
+                  <input type="number" name="quantity" size=4 value="1" min="1" step="1">
+                </div>
+                <a id="productAdd" data-id="" href="cart/add?id=<?=$product->id;?>" class="add-to-cart-link add-cart item_add">ADD TO CART</a>
 							
 						</div>
 					</div>
