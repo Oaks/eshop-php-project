@@ -228,6 +228,7 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 	</div>
 	<!--bottom-header-->
   <div class="content">
+    <?php debug($_SESSION); // session_destroy();?>
     <?=$content?>
   </div>
 	<!--information-starts-->
@@ -308,7 +309,6 @@ License URL: http://creativecommons.org/licenses/by/3.0/
         symbolRight = '<?=$curr['symbol_right'];?>';
   </script>
   <script src="js/jquery-1.11.0.min.js"></script>
-  <script src="js/simpleCart.min.js"> </script>
   <script src="megamenu/js/megamenu.js"> </script>
   <script src="js/imagezoom.js"></script>
   <script defer src="js/jquery.flexslider.js"></script>
