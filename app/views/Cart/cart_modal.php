@@ -17,7 +17,7 @@
           <td><a href="product/<?=$item['alias']?>"><?=$item['title']?></a></td>
           <td><?=$item['qty']?></td>
           <td><?=$item['price']?></td>
-          <td><span data-id="<?$id?>" class="glyphicon glyphicon-remove text-danger del-item" aria-hidden="true"></span></td>
+          <td><span data-id="<?=$id?>" class="glyphicon glyphicon-remove text-danger del-item" aria-hidden="true"></span></td>
         </tr>
         <?php endforeach; ?>
         <tr>
