@@ -40,4 +40,18 @@ class Cart {
     $_SESSION['cart.sum'] -= $sumMinus;
     unset($_SESSION['cart'][$id]);
   }
+
+  public static function recalc($curr) {
+    if ($_SESSION['cart.currency']) {
+      $coeff = $curr['value'] / $_SESSION['cart.currency']['value'];
+      foreach($_SESSION['cart'] as $k => $v) {
+        $_SESSION['cart'][$k]['price'] *= $coeff;
+      }
+      $_SESSION['cart.sum'] *= $coeff;
+
+      foreach($curr as $k => $v) {
+        $_SESSION['cart.currency'][$k] = $v;
+      }
+    }
+  }
 }
