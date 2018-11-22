@@ -67,6 +67,20 @@ $('#cart .modal-body').on('click', '.del-item', function() {
   });
 })
 
+function clearCart() {
+  $.ajax({
+    url: 'cart/clear',
+    type: 'GET',
+
+    success: function(res) {
+      showCart(res);
+    },
+    error: function() {
+      alert('Ошибка! Повторите позже');
+    }
+  });
+}
+
 /* Cart */
 
 $('#currency').change( function() {
