@@ -232,8 +232,13 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 			</div>
 			<div class="col-md-3 header-right"> 
 				<div class="search-bar">
+          <form action="search" method="GET" autocomplete="off"></form>
+            <input type="text" class="typeahead" id="typeahead" name="s">
+            <input type="submit" value="">
+          <!--
 					<input type="text" value="Search" onfocus="this.value = '';" onblur="if (this.value == '') {this.value = 'Search';}">
 					<input type="submit" value="">
+          -->
 				</div>
 			</div>
 			<div class="clearfix"> </div>
@@ -342,6 +347,7 @@ License URL: http://creativecommons.org/licenses/by/3.0/
   </script>
   <script src="js/jquery-1.11.0.min.js"></script>
   <script src="js/bootstrap.min.js"></script>
+  <script src="js/typeahead.bundle.js"></script>
   <script src="megamenu/js/megamenu.js"> </script>
   <script src="js/imagezoom.js"></script>
   <script defer src="js/jquery.flexslider.js"></script>
