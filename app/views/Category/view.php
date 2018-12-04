@@ -4,7 +4,7 @@
 			<div class="breadcrumbs-main">
 				<ol class="breadcrumb">
           <li><a href="<?=PATH;?>">Главная</a></li>
-          <li class="active">Поиск по запросу: "<?=h($query)?>"</li>
+          <li class="active">"Категория"</li>
 				</ol>
 			</div>
 		</div>
@@ -37,6 +37,8 @@
             <?php endforeach; ?>
 						<div class="clearfix"></div>
 					</div>
+        <?php else:?>
+          <h3>В этой категории товаров нет</h3>
         <?php endif;?>
 				</div>
 				<div class="col-md-3 prdt-right">
