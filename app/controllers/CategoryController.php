@@ -4,6 +4,7 @@ namespace app\controllers;
 
 use ishop\App;
 use app\models\Category;
+use app\models\Breadcrumbs;
 
 class CategoryController extends AppController {
 
@@ -15,7 +16,7 @@ class CategoryController extends AppController {
     }
 
     // хлебные крошки
-    $breadcrumbs = '';
+    $breadcrumbs = Breadcrumbs::getBreadcrumbs($category->id);;
 
     $cat_model = new Category();
     $ids = $cat_model->getIds($category->id);
