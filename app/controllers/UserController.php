@@ -8,10 +8,13 @@ class UserController extends AppController {
   public function signupAction() {
     if (!empty($_POST)) {
       $user = new User();
-      $data = $_POST;
-      $user->load($data);
-      debug($user);
-      die;
+      $user->load($_POST);
+      if (!$user->validate()) {
+        $user->getErrors();
+        redirect();
+      }
+      $_SESSION['success'] = 'OK';
+      redirect();
     }
     $this->setMeta('Регистрация');
   }
