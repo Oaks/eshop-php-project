@@ -6,16 +6,18 @@ use app\models\User;
 
 class UserController extends AppController {
   public function signupAction() {
-    if (!empty($_POST)) {
-      $user = new User($_POST);
+    $post = $_POST;
+    if (!empty($post)) {
+      $user = new User($post);
       if (!$user->validate() || !$user->checkUnique()) {
         $user->getErrors();
+        $_SESSION['form_data'] = $post;
         redirect();
         return;
       }
       $user->attributes['password'] = password_hash($user->attributes['password'], PASSWORD_DEFAULT);
       if ($user->save('user')) {
-        $_SESSION['success'] = 'Вы зарегестрированы';
+        $_SESSION['success'] = 'Вы зарегистрированы';
       } else {
         $_SESSION['error'] = 'Ошибка!';
       }
