@@ -3,6 +3,8 @@
 namespace app\controllers;
 
 use app\models\Cart;
+use app\models\User;
+use app\models\Order;
 
 class CartController extends AppController {
 
@@ -51,5 +53,40 @@ class CartController extends AppController {
     unset($_SESSION['cart.sum']);
 
     $this->loadView('cart_modal');
+  }
+
+  public function viewAction() {
+    $this->setMeta('Корзина');
+  }
+
+  public function checkoutAction() {
+    $data = $_POST;
+    if (!empty($post)) {
+      // Registration
+      if (!User::checkAuth()) {
+        $user = new User($post);
+        if (!$user->validate() || !$user->checkUnique()) {
+          $user->getErrors();
+          $_SESSION['form_data'] = $post;
+          redirect();
+          return;
+        }
+        $user->attributes['password'] = password_hash($user->attributes['password'], PASSWORD_DEFAULT);
+        if (!$user_id = $user->save('user')) {
+          $_SESSION['error'] = 'Ошибка!';
+          redirect();
+          return;
+        }
+      }
+
+      // Сохранить заказ
+      $data['user_id'] = isset($user_id) ? $user_id : $_SESSION['user']['id'];
+      $data['note'] = !empty($_POST['note']) ? $_POST['note'] : '';
+      $user_email = !empty($_SESSION['user']['email']) ? $_SESSION['user']['email'] : $_POST['email'];
+
+      $order_id = Order::saveOrder($data);
+      Order::mailOrder($order_id, $user_email);
+    }
+    redirect();
   }
 }
