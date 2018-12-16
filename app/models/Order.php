@@ -3,8 +3,22 @@
 namespace app\models;
 
 class Order extends AppModel {
+  protected $table = 'order';
 
-  public static function saveOrder($data) {
+  public $attributes = [
+    'user_id' => '',
+    'note' => '',
+    'currency' => '',
+  ];
+
+  public function __construct($data = null) {
+    if ($data) {
+      $this->load($data);
+    }
+  }
+
+  public function saveOrder() {
+    $this->saveX();
   }
 
   public static function saveOrderProduct($order_id) {

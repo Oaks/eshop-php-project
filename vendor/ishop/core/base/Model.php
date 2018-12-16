@@ -6,6 +6,7 @@ use ishop\Db;
 use Valitron\Validator;
 
 abstract class Model {
+  protected $table = '';
   public $attributes = [];
   protected $rules = [];
   public $errors = [];
@@ -46,8 +47,8 @@ abstract class Model {
     $_SESSION['error'] = $errors;
   }
 
-  public function save($table) {
-    $tbl = \R::dispense($table);
+  public function save() {
+    $tbl = \R::dispense($this->table);
     foreach ($this->attributes as $name => $value) {
       $tbl->$name = $value;
     }

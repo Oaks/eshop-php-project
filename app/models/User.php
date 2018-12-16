@@ -3,6 +3,8 @@
 namespace app\models;
 
 class User extends AppModel {
+  protected $table = 'user';
+
   public $attributes = [
     'login' => '',
     'password' => '',
@@ -61,7 +63,6 @@ class User extends AppModel {
       }
     }
     if ($user) {
-      debug($user);
       if (password_verify($password, $user->password)) {
         foreach ($user as $k => $v) {
           if ($k != 'password') {

@@ -60,7 +60,7 @@ class CartController extends AppController {
   }
 
   public function checkoutAction() {
-    $data = $_POST;
+    $post = $_POST;
     if (!empty($post)) {
       // Registration
       if (!User::checkAuth()) {
@@ -82,11 +82,15 @@ class CartController extends AppController {
       // Сохранить заказ
       $data['user_id'] = isset($user_id) ? $user_id : $_SESSION['user']['id'];
       $data['note'] = !empty($_POST['note']) ? $_POST['note'] : '';
-      $user_email = !empty($_SESSION['user']['email']) ? $_SESSION['user']['email'] : $_POST['email'];
+      $data['currency'] = $_SESSION['cart.currency']['code'];
 
-      $order_id = Order::saveOrder($data);
+      $order = new Order($data);
+      $order->save();
+
+      $user_email = !empty($_SESSION['user']['email']) ? $_SESSION['user']['email'] : $_POST['email'];
       Order::mailOrder($order_id, $user_email);
     }
-    redirect();
+    $_SESSION['success'] = 'Заказ успешно оформлен';
+    redirect(PATH);
   }
 }
