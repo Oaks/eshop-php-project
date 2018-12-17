@@ -21,9 +21,8 @@ class UserController extends AppController {
         redirect(PATH);
       } else {
         $_SESSION['error'] = 'Ошибка!';
+        redirect();
       }
-      redirect();
-      return;
     }
     $this->setMeta('Регистрация');
   }
@@ -33,10 +32,11 @@ class UserController extends AppController {
       $user = new User();
       if ($user->login()) {
         $_SESSION['success'] = 'Вы успешно авторизованы';
+        redirect(PATH);
       } else {
         $_SESSION['error'] = 'Логин/пароль введенны неверно';
+        redirect();
       }
-      redirect();
     }
     $this->setMeta('Вход');
   }

@@ -85,7 +85,7 @@ class CartController extends AppController {
       $data['currency'] = $_SESSION['cart.currency']['code'];
 
       $order = new Order($data);
-      $order->save();
+      $order->saveOrder();
 
       $user_email = !empty($_SESSION['user']['email']) ? $_SESSION['user']['email'] : $_POST['email'];
       Order::mailOrder($order_id, $user_email);
