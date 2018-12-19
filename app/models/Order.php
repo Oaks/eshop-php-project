@@ -2,6 +2,11 @@
 
 namespace app\models;
 
+use ishop\App;
+use Swift_SmtpTransport;
+use Swift_Mailer;
+use Swift_Message;
+
 class Order extends AppModel {
   protected $table = 'order';
 
@@ -32,6 +37,34 @@ class Order extends AppModel {
     \R::exec("INSERT INTO order_product (order_id, product_id, qty, title, price) VALUES $sql_part");
   }
 
-  public static function mailOrder($order_id, $user_email) {
+  public static function mailOrder($order_id, $user_email){
+//    // Create the Transport
+//    $transport = (new Swift_SmtpTransport(App::$app->getProperty('smtp_host'), App::$app->getProperty('smtp_port'), App::$app->getProperty('smtp_protocol')))
+//        ->setUsername(App::$app->getProperty('smtp_login'))
+//        ->setPassword(App::$app->getProperty('smtp_password'))
+//    ;
+//    // Create the Mailer using your created Transport
+//    $mailer = new Swift_Mailer($transport);
+//
+//    // Create a message
+//    ob_start();
+//    require APP . '/views/mail/mail_order.php';
+//    $body = ob_get_clean();
+//
+//    $message_client = (new Swift_Message("Вы совершили заказ №{$order_id} на сайте " . App::$app->getProperty('shop_name')))
+//        ->setFrom([App::$app->getProperty('smtp_login') => App::$app->getProperty('shop_name')])
+//        ->setTo($user_email)
+//        ->setBody($body, 'text/html')
+//    ;
+//
+//    $message_admin = (new Swift_Message("Сделан заказ №{$order_id}"))
+//        ->setFrom([App::$app->getProperty('smtp_login') => App::$app->getProperty('shop_name')])
+//        ->setTo(App::$app->getProperty('admin_email'))
+//        ->setBody($body, 'text/html')
+//    ;
+//
+//    // Send the message
+//    $result = $mailer->send($message_client);
+//    $result = $mailer->send($message_admin);
   }
 }

@@ -89,8 +89,14 @@ class CartController extends AppController {
 
       $user_email = !empty($_SESSION['user']['email']) ? $_SESSION['user']['email'] : $_POST['email'];
       Order::mailOrder($order_id, $user_email);
+
+      unset($_SESSION['cart']);
+      unset($_SESSION['cart.qty']);
+      unset($_SESSION['cart.sum']);
+      unset($_SESSION['cart.currency']);
+
+      $_SESSION['success'] = 'Заказ успешно оформлен';
     }
-    $_SESSION['success'] = 'Заказ успешно оформлен';
-    redirect(PATH);
+    redirect();
   }
 }

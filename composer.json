@@ -7,6 +7,10 @@
   },
   "require": {
     "gabordemooij/redbean": "dev-master",
-    "vlucas/valitron": "^1.4"
+    "vlucas/valitron": "^1.4",
+    "swiftmailer/swiftmailer": "5.4"
+  },
+  "require-dev": {
+    "phpstan/phpstan": "^0.9.2"
   }
 }
