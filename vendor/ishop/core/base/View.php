@@ -18,7 +18,7 @@ class View {
     $this->model = $route['controller'];
     $this->view = $route['action'];
     $this->meta = $meta;
-    $this->prefix = $route['prefix'];
+    $this->prefix = str_replace("\\", "/", $route['prefix']);
     if ($layout === false) {
       $this->layout = false;
     } else {
