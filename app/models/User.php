@@ -53,17 +53,17 @@ class User extends AppModel {
   }
 
   public function login($isAdmin = false) {
-    $login = trim($_POST['login']) ? trim($_POST['login']) : null;
-    $password = trim($_POST['password']) ? trim($_POST['password']) : null;
-    if ($login && $password) {
+//    $login = trim($_POST['login']) ? trim($_POST['login']) : null;
+//    $password = trim($_POST['password']) ? trim($_POST['password']) : null;
+    if ($this->attributes['login'] && $this->attributes['password']) {
       if ($isAdmin) {
-        $user = \R::findOne('user', "login = ? AND role = 'admin'", [$login]);
+        $user = \R::findOne('user', "login = ? AND role = 'admin'", [$this->attributes['login']]);
       } else {
-        $user = \R::findOne('user', "login = ? ", [$login]);
+        $user = \R::findOne('user', "login = ? ", [$this->attributes['login']]);
       }
     }
     if ($user) {
-      if (password_verify($password, $user->password)) {
+      if (password_verify($this->attributes['password'], $user->password)) {
         foreach ($user as $k => $v) {
           if ($k != 'password') {
             $_SESSION['user'][$k] = $v;

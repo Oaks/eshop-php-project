@@ -29,7 +29,7 @@ class UserController extends AppController {
 
   public function loginAction() {
     if (!empty($_POST)) {
-      $user = new User();
+      $user = new User($_POST);
       if ($user->login()) {
         $_SESSION['success'] = 'Вы успешно авторизованы';
         redirect(PATH);
