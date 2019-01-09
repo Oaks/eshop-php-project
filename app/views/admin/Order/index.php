@@ -46,7 +46,7 @@
               </table>
               </div>
               <div class="text-center">
-              <p>(<?=count($orders)?> заказа(ов) из <?=$count?>)</p>
+              <p>(<?=count($orders)?> заказ(а/ов) из <?=$count?>)</p>
                 <?php if ($pagination->countPages > 1):?>
                   <?=$pagination?>
                 <?php endif;?>

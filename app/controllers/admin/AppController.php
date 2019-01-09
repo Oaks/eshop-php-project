@@ -19,5 +19,13 @@ class AppController extends Controller {
     }
     new AppModel();
   }
+
+  public function getOrderId() {
+    $id = isset($_GET['id']) ? $_GET['id'] : null;
+    if (!$id) {
+      throw new Exception('Страница не найдена', 404);
+    }
+    return $id;
+  }
 }
 

@@ -3,7 +3,7 @@
 return [
     'admin_email' => 'bropstk@gmail.com',
     'shop_name' => 'Магазин ishop2.loc',
-    'pagination' => 3,
+    'pagination' => 2,
     'smtp_host' => 'smtp.ukr.net',
     'smtp_port' => '2525',
     'smtp_protocol' => 'ssl',
